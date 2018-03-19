@@ -17,6 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
+/devise-4.4.3
 /node_modules
 /yarn-error.log
 

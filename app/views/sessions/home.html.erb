@@ -1,16 +1,11 @@
-<h1>Vet User HomePage</h1>
 <% content_for :top_content do %>
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Register to get started.</p>
-      <p>
-        <!-- <% if user_signed_in? %> -->
-          <%= link_to 'Log Me Out', sign_out_path %>
-        <% end %><!-- <  % = link_to 'Register', user_reg_path, class: 'btn btn-primary btn-lg' %> -->
-      </p>
-    </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>For access, click one of the buttons below...</p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="/users/sign_up">New User</a>
+      <a class="btn btn-primary btn-lg" href="/users/sign_in">Log In</a>
   </div>
+</div>
 <% end %>
-
-<h3>app/views/sessions/home.html.erb</h3>

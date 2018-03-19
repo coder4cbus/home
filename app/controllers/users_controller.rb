@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def destroy
+  def sign_out
       @user.destroy
       respond_to do |format|
         format.html { redirect_to root_path, notice: 'User was successfully destroyed.' }
@@ -28,4 +28,4 @@ class UsersController < ApplicationController
 #     end
 #     render "new"
 #   end
-# end
+end

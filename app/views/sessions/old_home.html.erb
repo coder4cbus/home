@@ -1,0 +1,72 @@
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>Register to get started.</p>
+      <p>
+        <!-- <% if user_signed_in? %> -->
+          <%= link_to 'Log Me Out', sign_out_path %>
+        <% end %><!-- <  % = link_to 'Register', user_reg_path, class: 'btn btn-primary btn-lg' %> -->
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<h3>app/views/sessions/home.html.erb</h3>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Closure App</title>
+  <link rel="stylesheet" media="all" href="/assets/application-7b8ed055c9e78e9f72994aae1338a886.css" data-turbolinks-track="true" />
+  <script src="/assets/application-34eb4cfc18fb8c784e11ebbd0035494d.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="yl9QWABc/fS7RMuntQN/nPj8FTV9orBEjufNwSnvOWnAw9X7KbSeO6moG5n/+ZYV7Po27nprXw1JywdS+gqSNQ==" />
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://closureathome.com/">Closure </a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+          <li><a href="/users/sign_in">Log In</a></li>
+          <li><a href="/users/sign_up">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+</div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <p>For access, click one of the buttons below...</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/users/sign_up">New User</a>
+        <a class="btn btn-primary btn-lg" href="/users/sign_in">Log In</a>
+    </div>
+  </div>
+
+
+<div class="container">
+  <h1></h1>
+
+
+</div>
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">A Ruby on Rails App Created By: <a href="https://github.com/dvmjill/" target="_blank">Jill Hayes, DVM </a>and</p>
+    <a href="https://github.com/coder4cbus" target="_blank"> Eileen Ulry</a></p>
+  </div>
+  <img src="http://closureathome.com/assets/images/logo-footer.png" alt="Closure at Home">
+</div>
+
+</body>
+</html>
