@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
     devise_for :users
-
-    get '/secret', to: 'pages#secret', as: :secret
+    # 
+    # get '/secret', to: 'pages#secret', as: :secret
 
     root to: 'sessions#home'
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     post '/users/sign_in' => 'devise/sessions#create', as: :user
 
     delete '/users/sign_out' => 'devise/sessions#destroy', as: :sign_out
-    
+
   end
 
   # devise_scope :user do get "/some/route" => "some_devise_controller"
