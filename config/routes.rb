@@ -5,9 +5,18 @@ Rails.application.routes.draw do
 
     root to: 'sessions#home'
 
+
+
+    get '/users/sign_in' => 'users#sign_in', as: :sign_in
+
+    post '/users/sign_in' => 'devise/sessions#create', as: :user
+
+    delete '/users/sign_out' => 'devise/sessions#destroy', as: :sign_out
+    
   end
 
-# get '/users/sign_in' => 'users#sign_in', as: :sign_in
+  # devise_scope :user do get "/some/route" => "some_devise_controller"
+  # end
 # GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session
 # POST   /users/sign_in(.:format)       devise/sessions#create

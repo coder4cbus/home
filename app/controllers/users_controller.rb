@@ -9,7 +9,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-end
+  def destroy
+      @user.destroy
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'User was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    end
 
 #   def create
 #     @user = User.new(params[:user])

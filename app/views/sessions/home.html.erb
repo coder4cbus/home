@@ -5,7 +5,9 @@
       <h1>Welcome!</h1>
       <p>Register to get started.</p>
       <p>
-        <!-- <  % = link_to 'Register', new_user_reg_path, class: 'btn btn-primary btn-lg' %> -->
+        <!-- <% if user_signed_in? %> -->
+          <%= link_to 'Log Me Out', sign_out_path %>
+        <% end %><!-- <  % = link_to 'Register', user_reg_path, class: 'btn btn-primary btn-lg' %> -->
       </p>
     </div>
   </div>
