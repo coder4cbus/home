@@ -63,9 +63,6 @@ gem 'jquery-turbolinks'
 gem 'delayed_job_active_record'
 # gem 'faker'
 # gem 'carrierwave', '~> 1.0'
-#eau deactivated below gem
-# gem 'devise_zxcvbn'
-
 
 #removed from top, appeared after sass rails gem b/c I think this is what is causing th duplicate reference when we load server
 # gem 'bootstrap-sass'
