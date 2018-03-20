@@ -20,26 +20,25 @@ Rails.application.routes.draw do
 
     post '/users' =>     'devise/registrations#create'
 
-    # get '/users/cancel' =>     'devise/registrations#cancel', as: :cancel_reg
+    get '/users/cancel' =>     'devise/registrations#cancel', as: :cancel_reg
 
     get '/users/edit' => 'devise/registrations#edit', as: :edit_reg
 
     put '/users' => 'devise/registrations#update', as: :update_reg
 
-    get '/users/destroy' =>     'devise/registrations#destroy', as: :delete_reg
+    get '/users' =>     'devise/registrations#destroy', as: :delete_reg
 
-# /users page results in the following flash message so it appears two paths perform same action of registraiton cancellation
-#Bye! Your account has been successfully cancelled. We hope to see you again soon.
+
 
     get '/users/password/new' => 'devise/password#new', as: :new_pw
 
     post '/users/password' => 'devise/passwords#create'
 
-    # get '/users/password/edit' => 'devise/passwords#edit', as: :edit_pw
+    get '/users/password/edit' => 'devise/passwords#edit', as: :edit_pw
 
     put '/users/password' => 'devise/passwords#update', as: :update_pw
 
     end
   end
 
-  # eau- routes that are not working have been deactivated
+  # get '/users/sign_in' => 'users#sign_in', as: :sign_in
