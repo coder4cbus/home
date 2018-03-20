@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
     root to: 'sessions#home'
 
-    # get '/users/sign_in' => 'users#sign_in', as: :sign_in
 
     devise_scope :user do
 
@@ -41,3 +40,5 @@ Rails.application.routes.draw do
 
     end
   end
+
+  # get '/users/sign_in' => 'users#sign_in', as: :sign_in

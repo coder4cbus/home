@@ -6,4 +6,7 @@ class SessionsController < ApplicationController
 
   def home
   end
+
+  # def username = User.find(params[:username])
+  # end
 end

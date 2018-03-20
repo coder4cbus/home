@@ -9,6 +9,24 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # def create
+  #   @user = User.find(params[:id])
+  #   if @user.save
+  #     flash[:notice] = "You signed up successfully"
+  #    flash[:color]= "valid"
+  #   else @user !=
+  #     current_user
+  #     redirect_to root_path, :alert => "Access denied."
+  #   end
+  # end
+
+  def show
+    @user = User.find(params[:id])
+    unless @user == current_user
+      redirect_to root_path, :alert => "Access denied."
+    end
+  end
+
   def sign_out
       @user.destroy
       respond_to do |format|
@@ -17,15 +35,5 @@ class UsersController < ApplicationController
       end
     end
 
-#   def create
-#     @user = User.new(params[:user])
-#     if @user.save
-#       flash[:notice] = "You signed up successfully"
-#       flash[:color]= "valid"
-#     else
-#       flash[:notice] = "Form is invalid"
-#       flash[:color]= "invalid"
-#     end
-#     render "new"
-#   end
+
 end

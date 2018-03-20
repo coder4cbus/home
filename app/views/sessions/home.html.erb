@@ -1,11 +1,19 @@
 <% content_for :top_content do %>
 <div class="jumbotron">
   <div class="container">
-    <h1>Welcome!</h1>
-    <p>For access, click one of the buttons below...</p>
+
     <p>
+      <% unless user_signed_in? %>
+      <h1>Welcome!</h1>
+      <p>For access, click a button below...</p>
       <a class="btn btn-primary btn-lg" href="/users/sign_up">New User</a>
-      <a class="btn btn-primary btn-lg" href="/users/sign_in">Log In</a>
+      <a class="btn btn-primary btn-lg" href="/users/sign_in">Log In</a></p>
+      <p>
+      <% else %>
+      <h1> <%= "Hello,  @#{current_user.username} !" %> </h1> <br><h3> **Help! How can I get the REAL person's name to show up above? ** </h3>
+      <%= link_to 'Log Out', sign_out_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+      <% end %>
   </div>
 </div>
 <% end %>
