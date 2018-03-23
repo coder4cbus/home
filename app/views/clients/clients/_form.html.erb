@@ -1,0 +1,76 @@
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :client_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :client_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :client_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :client_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :client_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :client_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :client_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_email %>
+    <%= form.text_field :secondary_email, id: :client_secondary_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :client_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_phone %>
+    <%= form.text_field :secondary_phone, id: :client_secondary_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vet_id %>
+    <%= form.number_field :vet_id, id: :client_vet_id %>
+  </div>
+  <span> input type="hidden" name="client[:vet_id]" value="< % = current_user.id % >" </span>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<h5>added hidden input for vet id</h5>
+<h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/clients/_form.html.erb</h3>

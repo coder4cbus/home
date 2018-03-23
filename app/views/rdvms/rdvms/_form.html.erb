@@ -1,0 +1,74 @@
+<%= form_with(model: rdvm, local: true) do |form| %>
+  <% if rdvm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rdvm.errors.count, "error") %> prohibited this rdvm from being saved:</h2>
+
+      <ul>
+      <% rdvm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :rdvm_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :rdvm_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clinic_name %>
+    <%= form.text_field :clinic_name, id: :rdvm_clinic_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clinic_address %>
+    <%= form.text_field :clinic_address, id: :rdvm_clinic_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :rdvm_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :rdvm_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :rdvm_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preffered_contact %>
+    <%= form.text_field :preffered_contact, id: :rdvm_preffered_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :rdvm_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :rdvm_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vet_id %>
+    <%= form.number_field :vet_id, id: :rdvm_vet_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <h5>prefferred contact misspelled.. Should be Preferred. Additional field class appears for vet id</h5>
+    <h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/rdvms/_form.html.erb</h3>
+<% end %>

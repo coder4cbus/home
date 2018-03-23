@@ -1,0 +1,62 @@
+<%= form_with(model: pet, local: true) do |form| %>
+  <% if pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% pet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :pet_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :pet_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.number_field :weight, id: :pet_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :species %>
+    <%= form.select :species, species: :pet_species %>
+    <%= form.text_field :species, id: :pet_species %>
+  </div>
+
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.select :breed_id, breeds: :pet_breed %>
+    <%= form.text_field :breed, id: :pet_breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.select :client_id, clients: :pet_client_id %>
+    <%= form.number_field :client_id, id: :pet_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vet_id %>
+    <%= form.number_field :vet_id, id: :pet_vet_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rdvm_id %>
+    <%= form.select :rdvm_id, rdvms: :pet_rdvm_id %>
+    <%= form.text_field :rdvm, id: :pet_rdvm %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <h5>updated existing categories to include select option, added rdvm id with select option due to being present in previous version. There is a vet_id form label, which was not present in previous version</h5>
+  <h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/pets/_form.html.erb</h3>
+<% end %>

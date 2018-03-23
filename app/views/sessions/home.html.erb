@@ -10,7 +10,7 @@
       <a class="btn btn-primary btn-lg" href="/users/sign_in">Log In</a></p>
       <p>
       <% else %>
-      <h1> <%= "Hello,  @#{current_user.username} !" %> </h1> <br><h3> **Help! How can I get the REAL person's name to show up above? ** </h3>
+      <h1> <%= "Hello,  #{current_user.first_name}!" %> </h1> <br>
       <%= link_to 'Log Out', sign_out_path, class: 'btn btn-primary btn-lg' %>
       </p>
       <% end %>

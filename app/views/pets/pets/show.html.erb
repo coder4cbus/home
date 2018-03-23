@@ -1,0 +1,44 @@
+<h1>Show Pets in Database</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pet.age %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @pet.weight %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @pet.species %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @pet.breed %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @pet.client_id %>
+</p>
+
+<p>
+  <strong>Vet:</strong>
+  <%= @pet.vet_id %>
+</p>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
+<h5>added below...</h5>
+
+<%= link_to "Change Pet Info",  edit_pet_path(id: :id_pet)%>
+<h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/pets/show.html.erb</h3>
