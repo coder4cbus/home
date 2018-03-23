@@ -1,0 +1,50 @@
+<h1>RDVM Contacts</h1>
+<p id="notice"><%= notice %></p>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Clinic name</th>
+      <th>Clinic address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Preferred contact</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Vet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rdvms.each do |rdvm| %>
+      <tr>
+        <td><%= rdvm.first_name %></td>
+        <td><%= rdvm.last_name %></td>
+        <td><%= rdvm.clinic_name %></td>
+        <td><%= rdvm.clinic_address %></td>
+        <td><%= rdvm.city %></td>
+        <td><%= rdvm.state %></td>
+        <td><%= rdvm.zip %></td>
+        <td><%= rdvm.preffered_contact %></td>
+        <td><%= rdvm.phone %></td>
+        <td><%= rdvm.email %></td>
+        <td><%= rdvm.vet_id %></td>
+        <td><%= link_to 'Show', rdvm %></td>
+        <td><%= link_to 'Edit', edit_rdvm_path(rdvm) %></td>
+        <td><%= link_to 'Destroy', rdvm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rdvm', new_rdvm_path %>
+<h5>Added two other options for edit b/c both were contained by the previous version and wondering which options work - @rdvm and/or key and value pair</h5>
+<h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/rdvms/index.html.erb</h3>

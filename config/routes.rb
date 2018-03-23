@@ -43,3 +43,50 @@ Rails.application.routes.draw do
   end
 
   # eau- routes that are not working have been deactivated
+
+  #EAU copied routes from previous app
+  # Rails.application.routes.draw do
+    # resources :users
+    # resources :clients
+    # resources :rdvms
+    # resources :pets
+    #
+    #
+    # root 'users#index'
+    #
+    # get     'users/new' =>          'users#new', as: 'new_user'
+    #
+    # get     'users' =>              'users#index', as: 'users'
+    #
+    # post    'users' =>              'users#create'
+    #
+    # get     'users/:id' =>          'users#show', as: 'user'
+    #
+    # delete  'users/:id' =>          'users#destroy'
+    #
+    # patch   'users/:id' =>          'users#update'
+    #
+    # get     'users/:id/edit' =>     'users#edit', as: 'edit_user'
+
+    # get     'login' =>               'users#new', as: 'vet_login'
+    #
+    # get     'users/new' =>          'users#new', as: 'new_vet'
+    #
+    # get     'vets' =>              'users#index', as: 'vets'
+    #
+    # post    'users' =>              'users#create'
+    #
+    # get     'users/:id' =>          'users#show', as: 'vet'
+    #
+    # delete  'users/:id' =>          'users#destroy'
+    #
+    # patch   'users/:id' =>          'users#update'
+    #
+    # get     'users/:id/edit' =>     'users#edit', as: 'edit_vet'
+
+
+
+
+    # end
+
+  # eau- routes that are not working have been deactivated

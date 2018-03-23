@@ -1,0 +1,63 @@
+<h1>Showing RDVM Contacts</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @rdvm.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @rdvm.last_name %>
+</p>
+
+<p>
+  <strong>Clinic name:</strong>
+  <%= @rdvm.clinic_name %>
+</p>
+
+<p>
+  <strong>Clinic address:</strong>
+  <%= @rdvm.clinic_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @rdvm.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @rdvm.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @rdvm.zip %>
+</p>
+
+<p>
+  <strong>Preffered contact:</strong>
+  <%= @rdvm.preffered_contact %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @rdvm.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @rdvm.email %>
+</p>
+
+<p>
+  <strong>Vet:</strong>
+  <%= @rdvm.vet_id %>
+</p>
+
+<%= link_to 'Edit', edit_rdvm_path(@rdvm) %> |
+<%= link_to 'Back', rdvms_path %>
+<h5>added below options</h5>
+<%= link_to "Edit RDVM Contact", edit_rdvm_path(id: :id_rdvm) %>
+<h3>/Users/eileenulry/dropbox/closure2/ClosureAtHome/app/views/rdvms/show.html.erb</h3>

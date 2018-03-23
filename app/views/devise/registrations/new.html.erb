@@ -24,8 +24,47 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
+  <div class="form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, id: :first_name, class: 'form-control'%>
+    </div>
 
-  <%= f.submit "Sign up", class: 'btn btn-primary' %>
+    <div class="form-group">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, id: :last_name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :street_address %>
+      <%= f.text_field :street_address, id: :street_address, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :city %>
+      <%= f.text_field :city, id: :city, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :state %>
+      <%= f.text_field :state, id: :state, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, id: :zip, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, id: :phone, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :crematory_name %>
+      <%= f.text_field :crematory_name, id: :crematory_name, class: 'form-control' %>
+    </div>
+
+  <%= f.submit "Sign up", class: 'btn btn-primary' %></div>
 <% end %>
 <br>
 <%= render "devise/shared/links" %>
